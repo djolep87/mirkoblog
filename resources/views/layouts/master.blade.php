@@ -15,9 +15,9 @@
         <link rel="stylesheet" type="text/css" href="/css/addons/datatables.min.css">
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-
+        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
         
@@ -34,5 +34,6 @@
         <script>
             CKEDITOR.replace( 'article-ckeditor' );
         </script>
+        {{-- @include('inc/footer') --}}
     </body>
 </html>

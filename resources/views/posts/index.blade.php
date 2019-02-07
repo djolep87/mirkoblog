@@ -29,14 +29,48 @@
     @endif
     
 @endsection --}}
-
+<header>
+  <!-- Full Page Intro -->
+  <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-12 white-text text-center">
+            <h1 class="display-3 mb-0 pt-md-5 pt-5 white-text font-weight-bold wow fadeInDown" data-wow-delay="0.3s">MIRKO
+              <a class="indigo-text font-weight-bold">BLOG</a>
+            </h1>
+            <h5 class="text-uppercase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 white-text font-weight-bold wow fadeInDown"
+              data-wow-delay="0.3s">Fenomeni</h5>
+            <div class="wow fadeInDown" data-wow-delay="0.3s">
+              <a class="btn btn-light-blue btn-lg" href="#middle">Blog</a>
+              @if(Auth::user())
+                <a class="btn btn-indigo btn-lg" href="/dashboard">Dashboard</a>
+                @else
+                <a class="btn btn-indigo btn-lg" href="/login">Admin login</a>
+              @endif
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+</header>
 
 @section('content')
-<h1 class="text-center">Blog</h1>
-
+<h1 class="text-center" id="middle" style="padding-top: 40px;"><strong>Najnoviji postovi</strong> </h1>
+<hr>
 @if(count($posts) > 0)
     @foreach ($posts as $post)
-    <hr class="my-5">
+    
         <!-- Grid row -->
         <div class="row">
             
@@ -45,7 +79,7 @@
             
                     <!-- Featured image -->
                     <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                            <img style="with:100%;" src="/storage/cover_images/{{$post->cover_image}}">
+                            <img style="with: 100%; height: 250px;" src="/storage/cover_images/{{$post->cover_image}}">
                         <a>
                         <div class="mask rgba-white-slight">
                           
@@ -66,23 +100,25 @@
                     <!-- Post title -->
                     <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
                     <!-- Excerpt -->
-                    <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                        quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
-                        et aut officiis debitis cum soluta nobis est eligendi placeat facere aut rerum.</p>
+                    <div style="font-size: 16px">
+                        {!!str_limit($post->body, 500)!!}
+                    </div>
+                    {{-- {{str_limit($post->body, 500)}} --}} 
                     <!-- Post data -->
-                    <small>Written on {{$post->created_at->toFormattedDateString()}} by {{$post->user->name}}</small>
+                    <small style="font-size: 12px">Postavljeno: {{$post->created_at->toFormattedDateString()}}<br> Autor: {{$post->user->name}}</small>
                     <!-- Read more button -->
-                    <a class="btn btn-primary btn-md">Read more</a>
+                    <a class="btn btn-primary btn-md" href="/posts/{{$post->id}}">Procitaj vise</a>
                     
                 </div>
                 <!-- Grid column -->
             
         </div>
+        <hr class="my-5">
     @endforeach 
     {{$posts->links()}}
         @else
 
-            <p>No posts found!</p>   
+            <p>Nemate postova!</p>   
 
 
 @endif

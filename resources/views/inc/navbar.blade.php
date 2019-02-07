@@ -10,15 +10,15 @@
 
 		<div class="nav-wrapper">
 			<ul>
-				<li><a href="/">HOME</a></li>
-				<li><a href="/about">ABOUT US</a></li>
+				<li><a href="/">POCETNA</a></li>
+				<li><a href="/about">O MENI</a></li>
 				<li><a href="/posts">BLOG</a></li>
-				<li><a href="#">GALLERY</a></li>
+				<li><a href="#">GALERIJA</a></li>
 				
 				<hr>
 				
 				<div class="social">
-					FOLLOW US: 
+					PRATITE NAS: 
 					<a href="#"><img src="https://img.icons8.com/color/40/000000/facebook.png"></a>	
 					<a href="#"><img src="https://img.icons8.com/color/40/000000/instagram-new.png"></a>
 				</div>

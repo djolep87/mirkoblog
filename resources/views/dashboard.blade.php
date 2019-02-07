@@ -1,30 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
+@include('inc.nav')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Dashboard
-
-                    <div class=" float-right">
-                       
-                            <div class="dropdown-menu-right">
-                                <a class="dropdown-item" href="/dashboard">Dashboard</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-            
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                         
-                    </div>
-                   
+                    Kontrolni panel                   
                 </div>
                     
                 <div class="card-body">
@@ -33,16 +16,16 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <a href="/posts/create" class="btn btn-primary">Create Post</a>
+                        <a href="/posts/create" class="btn btn-primary">Kreiraj Post</a>
                         <hr>
-                        <h3>Your Blog Post</h3>
+                        <h3>Tvoji postovi</h3>
                         
                     @if (count($posts) > 0)
                         
                     
                         <table class="table table-striped">
                                 <tr>
-                                    <th>Title</th>
+                                    <th>Naslov</th>
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -53,7 +36,7 @@
                                     </td>
 
                                     <td>
-                                        <a href="/posts/{{ $post->id }}/edit" class="btn btn-default">Edit</a>
+                                        <a href="/posts/{{ $post->id }}/edit" class="btn btn-default">Izmeni</a>
                                     </td>
 
                                     <td>
@@ -61,7 +44,7 @@
                                             
                                             {{Form::hidden('_method', 'DELETE')}}
                                             
-                                            {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                            {{Form::submit('Izbrisi', ['class' => 'btn btn-danger'])}}
                                             
                                             {!!Form::close()!!}
                                     </td>
@@ -70,7 +53,7 @@
                             @endforeach
                         </table>
                     @else
-                        <p>You have no Posts</p>
+                        <p>Nemate postova</p>
                     @endif
                 </div>
             </div>
