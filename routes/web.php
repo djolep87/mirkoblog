@@ -22,6 +22,10 @@ Route::resource('posts', 'PostsController');
 
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 
+Route::get('image-gallery', 'ImageGalleryController@index');
+Route::post('image-gallery', 'ImageGalleryController@upload');
+Route::delete('image-gallery/{id}', 'ImageGalleryController@destroy');
+
 Route::resource('/comments','CommentsController');
 Auth::routes();
 

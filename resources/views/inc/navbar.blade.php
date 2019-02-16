@@ -13,7 +13,7 @@
 				<li><a href="/">POCETNA</a></li>
 				<li><a href="/about">O MENI</a></li>
 				<li><a href="/posts">BLOG</a></li>
-				<li><a href="#">GALERIJA</a></li>
+				<li><a href="/image-gallery">GALERIJA</a></li>
 				
 				<hr>
 				

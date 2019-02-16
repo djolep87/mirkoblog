@@ -50,7 +50,7 @@
               @if(Auth::user())
                 <a class="btn btn-indigo btn-lg" href="/dashboard">Dashboard</a>
                 @else
-                <a class="btn btn-indigo btn-lg" href="/login">Admin login</a>
+                {{-- <a class="btn btn-indigo btn-lg" href="/login">Admin login</a> --}}
               @endif
             </div>
           </div>
