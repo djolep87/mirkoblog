@@ -18,6 +18,7 @@
             {{Form::file('cover_image')}}
         </div>
             {{Form::submit('Postavi', ['class' => 'btn btn-primary'])}}
+            <a href="/dashboard" class="btn btn-danger">Prekini</a>
         {!! Form::close() !!}   
     
 @endsection

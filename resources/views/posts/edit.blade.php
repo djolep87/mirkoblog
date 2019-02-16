@@ -18,6 +18,7 @@
         </div>
             {{Form::hidden('_method', 'PUT')}}
             {{Form::submit('Izmeni', ['class' => 'btn btn-primary'])}}
+            <a href="/dashboard" class="btn btn-danger">Prekini</a>
         {!! Form::close() !!}   
     
 @endsection

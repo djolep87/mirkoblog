@@ -19,6 +19,10 @@ Route::get('/', 'PostsController@index');
 Route::get('/about', 'PagesController@about');
 
 Route::resource('posts', 'PostsController');
+
+Route::post('/posts/{post}/comments', 'CommentsController@store');
+
+Route::resource('/comments','CommentsController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');

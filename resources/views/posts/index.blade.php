@@ -100,7 +100,7 @@
                     <!-- Post title -->
                     <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
                     <!-- Excerpt -->
-                    <div style="font-size: 16px">
+                    <div style="font-size: 14px">
                         {!!str_limit($post->body, 500)!!}
                     </div>
                     {{-- {{str_limit($post->body, 500)}} --}} 
