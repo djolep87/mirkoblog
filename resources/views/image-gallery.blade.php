@@ -11,7 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/mdb.min.css">
-        
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/css/mdb.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mdb.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/addons/datatables.css">
+    <link rel="stylesheet" type="text/css" href="/css/addons/datatables.min.css">
        
 
 
@@ -42,8 +49,9 @@
 
 <div class="container">
         @include('inc/navbar')
+        <br><br><br>
 
-    <h3>Galerija</h3>
+    <h1 class="text-center">Galerija</h1>
 @if (!Auth::guest())
 
     <form action="{{ url('image-gallery') }}" class="form-image-upload" method="POST" enctype="multipart/form-data">
