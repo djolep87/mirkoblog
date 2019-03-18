@@ -8,7 +8,7 @@
 		</label>
 		
 
-		<div class="nav-wrapper">
+		<div class="nav-wrapper shadow-lg">
 			<ul>
 				<li><a href="/">POCETNA</a></li>
 				<li><a href="/about">O MENI</a></li>

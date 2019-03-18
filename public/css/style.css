@@ -6,13 +6,30 @@ html {
 	font-family: 'Montserrat', sans-serif;
   }
 
-.nav-wrapper {
+  .gallery
+  {
+	  display: inline-block;
+	  margin-top: 20px;
+  }
+  .close-icon{
+	  border-radius: 50%;
+	  position: absolute;
+	  right: 5px;
+	  top: -10px;
+	  padding: 5px 8px;
+  }
+  .form-image-upload{
+	  background: #e8e8e8 none repeat scroll 0 0;
+	  padding: 15px;
+  }
+  
+  .nav-wrapper {
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 400px;
 	height: 100%;
-	border-left: 0.1px solid black;
+	/* border-left: 0.1px solid black; */
 	z-index: -1;
 	background: #fff;
 	opacity: 0;
