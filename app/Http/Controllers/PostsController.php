@@ -168,6 +168,6 @@ class PostsController extends Controller
 
 
         $post->delete();
-        return redirect('/posts')->with('success', 'Post removed succesful');
+        return back()->with('success', 'Post removed succesful');
     }
 }

@@ -6,7 +6,7 @@
     <h1 class="content text-center"><strong>{{$post->title}}</strong></h1><br>
     <br>
     <br>
-    <img style="with:100%; display: block; margin-left: auto; margin-right: auto; width: 40%;" class="align-center" src="/storage/cover_images/{{$post->cover_image}}" alt="" >
+    <img style="with:100%; display: block; margin-left: auto; margin-right: auto; width: 40%;" class="align-center shadow-lg" src="/storage/cover_images/{{$post->cover_image}}" alt="" >
     <br><br>
        
     <div style="font-size: 14px">

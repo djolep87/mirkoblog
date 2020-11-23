@@ -79,7 +79,7 @@
             
                     <!-- Featured image -->
                     <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                            <img style="with: 100%; height: 250px;" src="/storage/cover_images/{{$post->cover_image}}">
+                            <img class="shadow-lg" style="with: 100%; height: 250px;" src="/storage/cover_images/{{$post->cover_image}}">
                         <a>
                         <div class="mask rgba-white-slight">
                           

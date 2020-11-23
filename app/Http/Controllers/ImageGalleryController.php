@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\ImageGallery;
 
 class ImageGalleryController extends Controller
@@ -52,7 +53,7 @@ class ImageGalleryController extends Controller
      */
     public function destroy($id)
     {
-    	ImageGallery::find($id)->delete();
+        ImageGallery::find($id)->delete();
     	return back()
     		->with('success','Image removed successfully.');	
     }
